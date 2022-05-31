@@ -11,7 +11,7 @@ spec:
     pro: "true"
   containers:
   - name: reddit-stremio-bot
-    image: "registry.gitlab.com/sleeyax-docker/stremio/reddit-stremio-bot:0.0.1"
+    image: "registry.gitlab.com/sleeyax-docker/stremio/reddit-stremio-bot:0.0.2"
     imagePullPolicy: IfNotPresent
   imagePullSecrets:
     - name: gitlab-reg-cred
