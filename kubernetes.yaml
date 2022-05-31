@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: reddit-stremio-bot
+  labels:
+    app: reddit-stremio-bot
+    type: bot
+  namespace: stremio
+spec:
+  nodeSelector:
+    pro: "true"
+  containers:
+  - name: reddit-stremio-bot
+    image: "registry.gitlab.com/sleeyax-docker/stremio/reddit-stremio-bot:0.0.1"
+    imagePullPolicy: IfNotPresent
+  imagePullSecrets:
+    - name: gitlab-reg-cred
